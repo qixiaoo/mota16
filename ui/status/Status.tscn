@@ -1,0 +1,400 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/font/Silver.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ui/status/Status.gd" type="Script" id=2]
+[ext_resource path="res://assets/image/items.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+extra_spacing_char = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 16, 16 )
+margin = Rect2( 0, -5, 0, 0 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 16, 16 )
+margin = Rect2( 0, -5, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 80, 0, 16, 16 )
+margin = Rect2( 0, -5, 0, 0 )
+
+[sub_resource type="InputEventAction" id=6]
+action = "fly"
+
+[sub_resource type="ShortCut" id=7]
+shortcut = SubResource( 6 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 32, 16, 16 )
+margin = Rect2( 0, -4, 0, 0 )
+
+[sub_resource type="InputEventAction" id=9]
+action = "ghost"
+
+[sub_resource type="ShortCut" id=10]
+shortcut = SubResource( 9 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 80, 32, 16, 16 )
+
+[sub_resource type="InputEventAction" id=12]
+action = "bow"
+
+[sub_resource type="ShortCut" id=13]
+shortcut = SubResource( 12 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 112, 0, 16, 16 )
+
+[sub_resource type="InputEventAction" id=15]
+action = "ice"
+
+[sub_resource type="ShortCut" id=16]
+shortcut = SubResource( 15 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 112, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 16, 16 )
+
+[node name="Status" type="VBoxContainer"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 88.0
+margin_bottom = 184.0
+mouse_filter = 2
+custom_constants/separation = 0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Property" type="GridContainer" parent="."]
+margin_right = 64.0
+margin_bottom = 60.0
+mouse_filter = 2
+custom_constants/vseparation = 0
+columns = 2
+
+[node name="HPLabel" type="RichTextLabel" parent="Property"]
+margin_right = 30.0
+margin_bottom = 15.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_fonts/normal_font = SubResource( 1 )
+text = "生命: "
+fit_content_height = true
+scroll_active = false
+
+[node name="HPValue" type="RichTextLabel" parent="Property"]
+margin_left = 34.0
+margin_right = 64.0
+margin_bottom = 15.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_fonts/normal_font = SubResource( 1 )
+text = "0"
+fit_content_height = true
+scroll_active = false
+
+[node name="AttackLabel" type="RichTextLabel" parent="Property"]
+margin_top = 15.0
+margin_right = 30.0
+margin_bottom = 30.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "攻击: "
+fit_content_height = true
+scroll_active = false
+
+[node name="AttackValue" type="RichTextLabel" parent="Property"]
+margin_left = 34.0
+margin_top = 15.0
+margin_right = 64.0
+margin_bottom = 30.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "0"
+fit_content_height = true
+scroll_active = false
+
+[node name="DefenceLabel" type="RichTextLabel" parent="Property"]
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 45.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "防御: "
+fit_content_height = true
+scroll_active = false
+
+[node name="DefenceValue" type="RichTextLabel" parent="Property"]
+margin_left = 34.0
+margin_top = 30.0
+margin_right = 64.0
+margin_bottom = 45.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "0"
+fit_content_height = true
+scroll_active = false
+
+[node name="GoldLabel" type="RichTextLabel" parent="Property"]
+margin_top = 45.0
+margin_right = 30.0
+margin_bottom = 60.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "金币"
+fit_content_height = true
+scroll_active = false
+
+[node name="GoldValue" type="RichTextLabel" parent="Property"]
+margin_left = 34.0
+margin_top = 45.0
+margin_right = 64.0
+margin_bottom = 60.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "0"
+fit_content_height = true
+scroll_active = false
+
+[node name="Key" type="GridContainer" parent="."]
+margin_top = 60.0
+margin_right = 64.0
+margin_bottom = 108.0
+mouse_filter = 2
+custom_constants/vseparation = 0
+columns = 2
+
+[node name="CopperKeyButton" type="TextureButton" parent="Key"]
+margin_right = 30.0
+margin_bottom = 16.0
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+texture_normal = SubResource( 2 )
+
+[node name="CopperKeyNumber" type="Label" parent="Key"]
+margin_left = 34.0
+margin_top = 1.0
+margin_right = 64.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+
+[node name="SapphireKeyButton" type="TextureButton" parent="Key"]
+margin_top = 16.0
+margin_right = 30.0
+margin_bottom = 32.0
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+texture_normal = SubResource( 4 )
+
+[node name="SapphireKeyKeyNumber" type="Label" parent="Key"]
+margin_left = 34.0
+margin_top = 17.0
+margin_right = 64.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+
+[node name="RubyKeyButton" type="TextureButton" parent="Key"]
+margin_top = 32.0
+margin_right = 30.0
+margin_bottom = 48.0
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+texture_normal = SubResource( 5 )
+
+[node name="RubyKeyNumber" type="Label" parent="Key"]
+margin_left = 34.0
+margin_top = 33.0
+margin_right = 64.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+
+[node name="Other" type="GridContainer" parent="."]
+margin_top = 108.0
+margin_right = 64.0
+margin_bottom = 166.0
+mouse_filter = 2
+custom_constants/vseparation = 0
+columns = 2
+
+[node name="RodOfWingButton" type="TextureButton" parent="Other"]
+margin_right = 30.0
+margin_bottom = 16.0
+focus_mode = 0
+size_flags_horizontal = 3
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 7 )
+texture_normal = SubResource( 8 )
+
+[node name="RodOfWingNumber" type="Label" parent="Other"]
+margin_left = 34.0
+margin_top = 1.0
+margin_right = 64.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+valign = 2
+
+[node name="GhostPipeButton" type="TextureButton" parent="Other"]
+margin_top = 16.0
+margin_right = 30.0
+margin_bottom = 30.0
+focus_mode = 0
+size_flags_horizontal = 3
+toggle_mode = true
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Other/GhostPipeButton"]
+margin_left = 2.0
+margin_top = -3.0
+margin_right = 14.0
+margin_bottom = 9.0
+mouse_filter = 2
+texture = SubResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GhostNumber" type="Label" parent="Other"]
+margin_left = 34.0
+margin_top = 16.0
+margin_right = 64.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+valign = 2
+
+[node name="BowButton" type="TextureButton" parent="Other"]
+visible = false
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 44.0
+focus_mode = 0
+size_flags_horizontal = 3
+toggle_mode = true
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 13 )
+
+[node name="TextureRect" type="TextureRect" parent="Other/BowButton"]
+margin_left = 2.0
+margin_top = -3.0
+margin_right = 14.0
+margin_bottom = 9.0
+texture = SubResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BowNumber" type="Label" parent="Other"]
+visible = false
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+valign = 2
+
+[node name="IceButton" type="TextureButton" parent="Other"]
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 44.0
+focus_mode = 0
+size_flags_horizontal = 3
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 16 )
+
+[node name="TextureRect" type="TextureRect" parent="Other/IceButton"]
+margin_left = 2.0
+margin_top = -2.0
+margin_right = 14.0
+margin_bottom = 10.0
+texture = SubResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IceNumber" type="Label" parent="Other"]
+margin_left = 34.0
+margin_top = 30.0
+margin_right = 64.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+valign = 2
+
+[node name="StoveButton" type="TextureButton" parent="Other"]
+margin_top = 44.0
+margin_right = 30.0
+margin_bottom = 58.0
+focus_mode = 0
+size_flags_horizontal = 3
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="Other/StoveButton"]
+margin_left = 2.0
+margin_top = -2.0
+margin_right = 14.0
+margin_bottom = 10.0
+texture = SubResource( 18 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoveNumber" type="Label" parent="Other"]
+margin_left = 34.0
+margin_top = 44.0
+margin_right = 64.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "0"
+valign = 2
+[connection signal="pressed" from="Other/RodOfWingButton" to="." method="_on_RodOfWingButton_pressed"]
+[connection signal="pressed" from="Other/GhostPipeButton" to="." method="_on_GhostPipeButton_pressed"]
+[connection signal="pressed" from="Other/BowButton" to="." method="_on_BowButton_pressed"]
+[connection signal="pressed" from="Other/IceButton" to="." method="_on_IceButton_pressed"]
+[connection signal="pressed" from="Other/StoveButton" to="." method="_on_StoveButton_pressed"]

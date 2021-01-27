@@ -1,0 +1,279 @@
+{
+    "$schema": "./prop.schema.json",
+    "红药水": {
+        "name": "红药水",
+        "description": [
+            "增加 100 点 HP"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 100,
+        "frame": 0,
+        "is_collectible": false
+    },
+    "蓝药水": {
+        "name": "蓝药水",
+        "description": [
+            "增加 200 点 HP"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 200,
+        "frame": 1,
+        "is_collectible": false
+    },
+    "绿药水": {
+        "name": "绿药水",
+        "description": [
+            "增加 500 点 HP"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 500,
+        "frame": 2,
+        "is_collectible": false
+    },
+    "黄钥匙": {
+        "name": "黄钥匙",
+        "description": [
+            "可以打开黄色的门"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 3,
+        "is_collectible": true
+    },
+    "蓝钥匙": {
+        "name": "蓝钥匙",
+        "description": [
+            "可以打开蓝色的门"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 4,
+        "is_collectible": true
+    },
+    "红钥匙": {
+        "name": "红钥匙",
+        "description": [
+            "可以打开红色的门"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 5,
+        "is_collectible": true
+    },
+    "木之镐": {
+        "name": "木之镐",
+        "description": [
+            "或许有着什么作用..."
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 6,
+        "is_collectible": true
+    },
+    "木之弓": {
+        "name": "木之弓",
+        "description": [
+            "或许有着什么作用..."
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 7,
+        "is_collectible": true
+    },
+    "木之劍": {
+        "name": "木之劍",
+        "description": [
+            "增加 10 点攻击"
+        ],
+        "attack": 10,
+        "defence": 0,
+        "hp": 0,
+        "frame": 8,
+        "is_collectible": true
+    },
+    "海之劍": {
+        "name": "海之劍",
+        "description": [
+            "增加 20 点攻击"
+        ],
+        "attack": 20,
+        "defence": 0,
+        "hp": 0,
+        "frame": 9,
+        "is_collectible": true
+    },
+    "森之劍": {
+        "name": "森之劍",
+        "description": [
+            "增加 40 点攻击"
+        ],
+        "attack": 40,
+        "defence": 0,
+        "hp": 0,
+        "frame": 10,
+        "is_collectible": true
+    },
+    "黑曜劍": {
+        "name": "黑曜劍",
+        "description": [
+            "增加 80 点攻击"
+        ],
+        "attack": 80,
+        "defence": 0,
+        "hp": 0,
+        "frame": 11,
+        "is_collectible": true
+    },
+    "圣杯": {
+        "name": "圣杯",
+        "description": [
+            "增加 1000 点 HP",
+            "你感到身体充满了活力"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 1000,
+        "frame": 12,
+        "is_collectible": false
+    },
+    "日之徽章": {
+        "name": "日之徽章",
+        "description": [
+            "或许有着什么作用..."
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 13,
+        "is_collectible": true
+    },
+    "心之徽章": {
+        "name": "心之徽章",
+        "description": [
+            "或许有着什么作用..."
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 14,
+        "is_collectible": true
+    },
+    "雪之徽章": {
+        "name": "雪之徽章",
+        "description": [
+            "或许有着什么作用..."
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 15,
+        "is_collectible": true
+    },
+    "木之盾": {
+        "name": "木之盾",
+        "description": [
+            "增加 10 点防御"
+        ],
+        "attack": 0,
+        "defence": 10,
+        "hp": 0,
+        "frame": 16,
+        "is_collectible": true
+    },
+    "海之盾": {
+        "name": "海之盾",
+        "description": [
+            "增加 20 点防御"
+        ],
+        "attack": 0,
+        "defence": 20,
+        "hp": 0,
+        "frame": 17,
+        "is_collectible": true
+    },
+    "森之盾": {
+        "name": "森之盾",
+        "description": [
+            "增加 40 点防御"
+        ],
+        "attack": 0,
+        "defence": 40,
+        "hp": 0,
+        "frame": 18,
+        "is_collectible": true
+    },
+    "黑曜盾": {
+        "name": "黑曜盾",
+        "description": [
+            "增加 80 点防御"
+        ],
+        "attack": 0,
+        "defence": 80,
+        "hp": 0,
+        "frame": 19,
+        "is_collectible": true
+    },
+    "飞行器": {
+        "name": "飞行器",
+        "description": [
+            "点击左側的飞行器图标可以飞往去过的楼層"
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 20,
+        "is_collectible": true
+    },
+    "幽灵烟斗": {
+        "name": "幽灵烟斗",
+        "description": [
+            "或许有着什么作用..."
+        ],
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 21,
+        "is_collectible": true
+    },
+    "红宝石": {
+        "name": "红宝石",
+        "description": [
+            "增加 3 点攻击"
+        ],
+        "attack": 3,
+        "defence": 0,
+        "hp": 0,
+        "frame": 27,
+        "is_collectible": false
+    },
+    "蓝宝石": {
+        "name": "蓝宝石",
+        "description": [
+            "增加 3 点防御"
+        ],
+        "attack": 0,
+        "defence": 3,
+        "hp": 0,
+        "frame": 28,
+        "is_collectible": false
+    },
+    "绿宝石": {
+        "name": "绿宝石",
+        "description": [
+            "增加 3 点攻击和防御"
+        ],
+        "attack": 3,
+        "defence": 3,
+        "hp": 0,
+        "frame": 29,
+        "is_collectible": false
+    }
+}

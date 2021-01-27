@@ -1,0 +1,60 @@
+[gd_resource type="Theme" load_steps=12 format=2]
+
+[ext_resource path="res://assets/font/Silver.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ui/themes/button-focus.tres" type="StyleBox" id=2]
+[ext_resource path="res://ui/themes/button-normal.tres" type="StyleBox" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+extra_spacing_bottom = -6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+extra_spacing_bottom = -6
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+border_width_left = 4
+
+[sub_resource type="StyleBoxFlat" id=8]
+border_width_left = 4
+
+[resource]
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 1 )
+Button/styles/disabled = ExtResource( 3 )
+Button/styles/focus = ExtResource( 2 )
+Button/styles/hover = ExtResource( 3 )
+Button/styles/normal = ExtResource( 3 )
+Button/styles/pressed = ExtResource( 3 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 2 )
+Label/styles/normal = null
+PopupPanel/styles/panel = SubResource( 3 )
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 4 )
+VScrollBar/styles/grabber_highlight = SubResource( 5 )
+VScrollBar/styles/grabber_pressed = SubResource( 6 )
+VScrollBar/styles/scroll = SubResource( 7 )
+VScrollBar/styles/scroll_focus = SubResource( 8 )

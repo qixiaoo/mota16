@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/platformer-pc/PlatformerPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ext-01/Ext-01.gd" type="Script" id=2]
+[ext_resource path="res://scenes/level/Level.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/portal/Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/trigger/Trigger.tscn" type="PackedScene" id=5]
+
+[node name="Ext-01" instance=ExtResource( 3 )]
+script = ExtResource( 2 )
+level = -1000
+level_name = "Ext Level 1"
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 65536, 0, 0, 65542, 0, 0, 65543, 15, 0, 65552, 0, 0, 65554, 0, 0, 131072, 0, 0, 131078, 0, 0, 131079, 13, 0, 131088, 0, 0, 131090, 0, 0, 196608, 0, 0, 196614, 0, 0, 196615, 14, 0, 196624, 0, 0, 196626, 0, 0, 262144, 0, 0, 262150, 0, 0, 262151, 13, 0, 262162, 0, 0, 327680, 0, 0, 327686, 0, 0, 327687, 12, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 393216, 0, 0, 393222, 0, 0, 393223, 13, 0, 393234, 0, 0, 458752, 0, 0, 458758, 0, 0, 458759, 12, 0, 458770, 0, 0, 524288, 0, 0, 524294, 0, 0, 524295, 13, 0, 524306, 0, 0, 589824, 0, 0, 589830, 0, 0, 589831, 14, 0, 589842, 0, 0, 655360, 0, 0, 655366, 0, 0, 655367, 13, 0, 655378, 0, 0, 720896, 0, 0, 720902, 0, 0, 720903, 12, 0, 720904, 11, 0, 720908, 9, 0, 720910, 10, 0, 720912, 11, 0, 720914, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0 )
+
+[node name="PropMap" parent="." index="2"]
+tile_data = PoolIntArray( 65550, 13, 0 )
+
+[node name="PortalDown" parent="." index="6" instance=ExtResource( 4 )]
+position = Vector2( 280, 24 )
+collision_layer = 0
+collision_mask = 0
+type = 1
+
+[node name="Trigger" parent="PortalDown" index="2" instance=ExtResource( 5 )]
+id = "lv-ext-01-down"
+events = [ "s_back_to_lv9" ]
+one_shot = false
+
+[node name="PortalUp" parent="." index="7" instance=ExtResource( 4 )]
+position = Vector2( 280, 184 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="Trigger" parent="PortalUp" index="2" instance=ExtResource( 5 )]
+id = "lv-ext-01-up"
+events = [ "s_back_to_lv9" ]
+one_shot = false
+
+[node name="PlatformerPC" parent="." index="8" instance=ExtResource( 1 )]
+position = Vector2( 280, 40 )

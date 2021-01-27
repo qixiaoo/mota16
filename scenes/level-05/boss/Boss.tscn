@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://objects/npc/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/level-05/boss/Boss.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_local_to_scene = true
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 50, 51 ]
+}
+
+[node name="Boss" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+npc_id = "骷髅女士[虚弱]"
+
+[node name="Sprite" parent="." index="1"]
+frame = 76
+
+[node name="AnimationPlayer" parent="." index="2"]
+anims/idle = SubResource( 1 )

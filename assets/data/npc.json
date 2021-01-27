@@ -1,0 +1,192 @@
+{
+    "$schema": "./npc.schema.json",
+    "蓝色史莱姆": {
+        "name": "蓝色史莱姆",
+        "attack": 20,
+        "defence": 2,
+        "hp": 45,
+        "frame": 0,
+        "group": "g_enemy",
+        "gold": 1
+    },
+    "大黄蜂": {
+        "name": "大黄蜂",
+        "attack": 30,
+        "defence": 4,
+        "hp": 50,
+        "frame": 2,
+        "group": "g_enemy",
+        "gold": 1
+    },
+    "蜘蛛": {
+        "name": "蜘蛛",
+        "attack": 45,
+        "defence": 5,
+        "hp": 60,
+        "frame": 4,
+        "group": "g_enemy",
+        "gold": 1
+    },
+    "红色史莱姆": {
+        "name": "红色史莱姆",
+        "attack": 50,
+        "defence": 10,
+        "hp": 60,
+        "frame": 12,
+        "group": "g_enemy",
+        "gold": 2
+    },
+    "小幽灵": {
+        "name": "小幽灵",
+        "attack": 52,
+        "defence": 10,
+        "hp": 100,
+        "frame": 14,
+        "group": "g_enemy",
+        "gold": 2
+    },
+    "骷髅投掷者": {
+        "name": "骷髅投掷者",
+        "attack": 60,
+        "defence": 12,
+        "hp": 100,
+        "frame": 16,
+        "group": "g_enemy",
+        "gold": 3
+    },
+    "骷髅盾衛": {
+        "name": "骷髅盾衛",
+        "attack": 60,
+        "defence": 20,
+        "hp": 110,
+        "frame": 24,
+        "group": "g_enemy",
+        "gold": 3
+    },
+    "骷髅劍士": {
+        "name": "骷髅劍士",
+        "attack": 80,
+        "defence": 30,
+        "hp": 120,
+        "frame": 26,
+        "group": "g_enemy",
+        "gold": 4
+    },
+    "骷髅枪兵": {
+        "name": "骷髅枪兵",
+        "attack": 100,
+        "defence": 36,
+        "hp": 140,
+        "frame": 28,
+        "group": "g_enemy",
+        "gold": 4
+    },
+    "骷髅女士[虚弱]": {
+        "name": "骷髅女士[虚弱]",
+        "attack": 100,
+        "defence": 25,
+        "hp": 150,
+        "frame": 76,
+        "group": "g_enemy",
+        "gold": 20
+    },
+    "史莱姆王": {
+        "name": "史莱姆王",
+        "attack": 90,
+        "defence": 25,
+        "hp": 200,
+        "frame": 72,
+        "group": "g_enemy",
+        "gold": 4
+    },
+    "女巫": {
+        "name": "女巫",
+        "attack": 100,
+        "defence": 43,
+        "hp": 150,
+        "frame": 36,
+        "group": "g_enemy",
+        "gold": 8
+    },
+    "巫師": {
+        "name": "巫師",
+        "attack": 120,
+        "defence": 56,
+        "hp": 150,
+        "frame": 38,
+        "group": "g_enemy",
+        "gold": 10
+    },
+    "幽灵王": {
+        "name": "幽灵王",
+        "attack": 120,
+        "defence": 58,
+        "hp": 200,
+        "frame": 40,
+        "group": "g_enemy",
+        "gold": 20
+    },
+    "猫史莱姆": {
+        "name": "猫史莱姆",
+        "attack": 120,
+        "defence": 65,
+        "hp": 200,
+        "frame": 74,
+        "group": "g_enemy",
+        "gold": 10
+    },
+    "赤甲劍士": {
+        "name": "赤甲劍士",
+        "attack": 125,
+        "defence": 70,
+        "hp": 200,
+        "frame": 48,
+        "group": "g_enemy",
+        "gold": 12
+    },
+    "赤甲枪兵": {
+        "name": "赤甲枪兵",
+        "attack": 160,
+        "defence": 85,
+        "hp": 200,
+        "frame": 50,
+        "group": "g_enemy",
+        "gold": 10
+    },
+    "长枪騎士": {
+        "name": "长枪騎士",
+        "attack": 193,
+        "defence": 110,
+        "hp": 200,
+        "frame": 52,
+        "group": "g_enemy",
+        "gold": 15
+    },
+    "重枪騎士": {
+        "name": "重枪騎士",
+        "attack": 0,
+        "defence": 0,
+        "hp": 0,
+        "frame": 60,
+        "group": "g_enemy",
+        "gold": 10
+    },
+    "巨盾衛士": {
+        "name": "巨盾衛士",
+        "attack": 185,
+        "defence": 120,
+        "hp": 210,
+        "frame": 62,
+        "group": "g_enemy",
+        "gold": 15
+    },
+    "骷髅女士": {
+        "name": "骷髅女士",
+        "attack": 210,
+        "defence": 130,
+        "hp": 400,
+        "frame": 64,
+        "group": "g_enemy",
+        "gold": 50
+    }
+}

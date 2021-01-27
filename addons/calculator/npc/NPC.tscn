@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/calculator/number/Number.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/calculator/npc/NPC.gd" type="Script" id=2]
+[ext_resource path="res://assets/font/Silver.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="NPC" type="GridContainer"]
+margin_right = 290.0
+margin_bottom = 98.0
+columns = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pc_data = {
+"attack": 0.0,
+"defence": 0.0,
+"hp": 0.0
+}
+npc_data = {
+"attack": 0.0,
+"defence": 0.0,
+"hp": 0.0
+}
+
+[node name="Name" type="Label" parent="."]
+margin_right = 118.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 1 )
+text = "name"
+
+[node name="Damage" type="Label" parent="."]
+modulate = Color( 0.86, 0.08, 0.24, 1 )
+margin_left = 122.0
+margin_right = 240.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 2 )
+text = "inf"
+valign = 1
+
+[node name="EnemyAttack" parent="." instance=ExtResource( 1 )]
+margin_top = 23.0
+margin_bottom = 47.0
+label = "敌方攻击"
+value = 0.0
+
+[node name="EnemyDefence" parent="." instance=ExtResource( 1 )]
+margin_left = 122.0
+margin_top = 23.0
+margin_right = 240.0
+margin_bottom = 47.0
+label = "敌方防御"
+value = 0.0
+
+[node name="EnemyHP" parent="." instance=ExtResource( 1 )]
+margin_top = 51.0
+margin_bottom = 75.0
+label = "敌方生命"
+value = 0.0
+
+[node name="PCAttack" parent="." instance=ExtResource( 1 )]
+margin_left = 122.0
+margin_top = 51.0
+margin_right = 240.0
+margin_bottom = 75.0
+label = "我方攻击"
+value = 0.0
+
+[node name="PCDefence" parent="." instance=ExtResource( 1 )]
+margin_top = 79.0
+margin_bottom = 103.0
+label = "我方防御"
+value = 0.0
+
+[node name="PCHP" parent="." instance=ExtResource( 1 )]
+margin_left = 122.0
+margin_top = 79.0
+margin_right = 240.0
+margin_bottom = 103.0
+label = "我方生命"
+value = 0.0
+
+[node name="Gold" parent="." instance=ExtResource( 1 )]
+margin_top = 107.0
+margin_bottom = 131.0
+label = "金币奖励"
+value = 0.0

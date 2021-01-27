@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "script data schema",
+    "description": "mota 16 npc data schema",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        }
+    },
+    "patternProperties": {
+        "[\u4e00-\u9fa5]+": {
+            "type": "object",
+            "patternProperties": {
+                "([\u4e00-\u9fa5]+)|(\\w+)": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

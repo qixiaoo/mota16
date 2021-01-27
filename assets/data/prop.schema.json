@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "prop data schema",
+    "description": "mota 16 prop data schema",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        }
+    },
+    "patternProperties": {
+        "[\u4e00-\u9fa5]+": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "attack": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "defence": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "hp": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "frame": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "is_collectible": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "name",
+                "attack",
+                "defence",
+                "hp",
+                "frame",
+                "is_collectible"
+            ]
+        }
+    }
+}

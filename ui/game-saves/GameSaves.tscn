@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/game-saves/GameSaves.gd" type="Script" id=1]
+[ext_resource path="res://ui/themes/default-theme.tres" type="Theme" id=2]
+
+[node name="GameSaves" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 304.0
+margin_bottom = 184.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+margin_right = 304.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 60
+custom_constants/margin_top = 10
+custom_constants/margin_left = 60
+custom_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/MarginContainer"]
+margin_left = 60.0
+margin_top = 10.0
+margin_right = 244.0
+margin_bottom = 174.0
+columns = 2
+
+[node name="SaveButton" type="Button" parent="."]
+margin_left = 83.0
+margin_top = 184.0
+margin_right = 146.0
+margin_bottom = 204.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "添加存档"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="."]
+margin_left = 166.0
+margin_top = 184.0
+margin_right = 229.0
+margin_bottom = 204.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "关闭"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]

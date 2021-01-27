@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ui/option-dialog/OptionDialog.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/Silver.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/themes/default-theme.tres" type="Theme" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+extra_spacing_bottom = -6
+extra_spacing_char = 1
+font_data = ExtResource( 2 )
+
+[node name="OptionDialog" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 203.0
+margin_top = 164.0
+margin_right = 296.0
+margin_bottom = 164.0
+grow_horizontal = 0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="PanelContainer" parent="."]
+margin_left = 8.0
+margin_top = 171.0
+margin_right = 296.0
+margin_bottom = 200.0
+grow_vertical = 0
+theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+margin_right = 288.0
+margin_bottom = 29.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 278.0
+margin_bottom = 19.0
+size_flags_vertical = 4
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false

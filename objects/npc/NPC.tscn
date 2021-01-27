@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objects/npc/NPC.gd" type="Script" id=1]
+[ext_resource path="res://assets/image/characters.png" type="Texture" id=2]
+[ext_resource path="res://assets/font/Silver.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="Animation" id=2]
+resource_local_to_scene = true
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 50, 51 ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 6
+extra_spacing_char = 1
+font_data = ExtResource( 3 )
+
+[node name="NPC" type="StaticBody2D" groups=[
+"g_interactive",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+vframes = 10
+hframes = 12
+frame = 51
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/idle = SubResource( 2 )
+
+[node name="DamageLabel" type="RichTextLabel" parent="."]
+margin_left = -8.0
+margin_top = 4.0
+margin_right = 8.0
+margin_bottom = 8.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "012345"
+text = "012345"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

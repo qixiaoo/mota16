@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/pause/Pause.gd" type="Script" id=1]
+[ext_resource path="res://ui/themes/default-theme.tres" type="Theme" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 0.356863 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.156863, 0.137255, 0.137255, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[node name="Pause" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -39.5
+margin_right = 75.0
+margin_bottom = 39.5
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 5.0
+margin_top = 21.0
+margin_right = 145.0
+margin_bottom = 57.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/margin_right = 30
+custom_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+margin_left = 30.0
+margin_right = 110.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Resume" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 80, 16 )
+size_flags_horizontal = 3
+text = "返回"
+
+[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 80.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 80, 16 )
+text = "退出"
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
