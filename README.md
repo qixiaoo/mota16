@@ -6,7 +6,9 @@ A simple RPG game made with the [Godot game engine](https://godotengine.org/).
 
 ## 介绍
 
-Warning：
+一款简单的魔塔小游戏，使用 Godot 引擎制作。
+
+**Warning**：
 
 - 该游戏尚未完成，请酌情酌量使用。
 - 这是一个学习 Godot 的练手项目，限于作者姿势水平，在使用过程中可能会遇到不可避免的崩坏、失控、闪瞎眼等情况，还请见谅。
