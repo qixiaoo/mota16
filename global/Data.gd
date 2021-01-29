@@ -25,17 +25,13 @@ const INIT_TASK = {
 
 const INIT_USER_DATA = {
 	"name": "",
-	# todo: 初始三属性修改为 10, 10, 1000
 	"attack": 10,
 	"defence": 10,
 	"hp": 1000,
 	"gold": 0,
 	"level": 0,
 	"max_reached_level": 0,
-	# todo: 初始位置修改为 200, 184
-#	"position": [200, 72],
 	"position": [200, 184],
-#	"position": [120, 184],
 	"inventory": {},
 	"consumed_blocks": {},
 	"extra_blocks": {},
@@ -44,8 +40,6 @@ const INIT_USER_DATA = {
 }
 
 const INIT_GAME_DATA = {
-	# todo: 修改 is_debug false
-	"is_debug": true,
 	"version": "0.1",
 	"settings": {},
 	"user_data": INIT_USER_DATA,
@@ -337,7 +331,7 @@ func get_extra_item(key: String, default = EMPTY_STR) -> String:
 
 
 func is_debug() -> bool:
-	return _game_data.is_debug
+	return OS.is_debug_build()
 
 
 func save() -> void:
