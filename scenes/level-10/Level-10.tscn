@@ -4,23 +4,12 @@
 [ext_resource path="res://objects/dinosaur/Dinosaur.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/trigger/Trigger.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/level-10/Level-10.gd" type="Script" id=4]
-[ext_resource path="res://assets/image/items.png" type="Texture" id=5]
+[ext_resource path="res://assets/image/blank.png" type="Texture" id=5]
 [ext_resource path="res://assets/sound/dinosaur.wav" type="AudioStream" id=6]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform float brightness: hint_range(0.0, 1.0) = 0.0;
-
-void fragment() {
-    vec3 c = textureLod(SCREEN_TEXTURE, SCREEN_UV, 0.0).rgb;
-    c.rgb = mix(c.rgb, vec3(0.0), brightness);
-    COLOR.rgb = c;
-}
-"
+[ext_resource path="res://shaders/screen-transition.shader" type="Shader" id=7]
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = ExtResource( 7 )
 shader_param/brightness = 0.0
 
 [sub_resource type="Animation" id=3]
@@ -73,10 +62,13 @@ events = [ "s_chat_with_dino" ]
 
 [node name="Mask" type="Sprite" parent="." index="8"]
 material = SubResource( 2 )
-position = Vector2( 152, 104 )
-scale = Vector2( 2.375, 1.625 )
+scale = Vector2( 19, 13 )
 z_index = 20
 texture = ExtResource( 5 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="9"]
 position = Vector2( 200, 96 )

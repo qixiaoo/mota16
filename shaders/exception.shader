@@ -1,7 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
+shader_type canvas_item;
 
 uniform float stripe_count: hint_range(0.0, 1000.0);
 uniform float offset: hint_range(-1.0, 1.0);
@@ -19,18 +16,7 @@ void fragment() {
 	vec2 fpos = fract(uv);
 	
 	float i = ipos.y, f = fpos.y;
-	bool is_even = mod(i, 2.0) == 0.0;
 	float real_offset = rand(vec2(i)) * offset;
 	
-	if (is_even) {
-		COLOR = texture(TEXTURE, UV + vec2(real_offset, 0));
-	} else {
-		COLOR = texture(TEXTURE, UV);
-	}
+	COLOR = texture(TEXTURE, UV + mod(i, 2.0) * vec2(real_offset, 0));
 }
-"
-
-[resource]
-shader = SubResource( 1 )
-shader_param/stripe_count = 570.248
-shader_param/offset = 0.578

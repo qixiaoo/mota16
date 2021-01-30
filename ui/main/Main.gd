@@ -33,9 +33,14 @@ func _on_Exit_pressed() -> void:
 	get_tree().quit()
 
 
-func _on_About_pressed():
+func _on_About_pressed() -> void:
 	anim.play("show-detail")
 
 
-func _on_Button_pressed():
+func _on_Button_pressed() -> void:
 	anim.play("hide-detail")
+
+
+func _on_RichTextLabel_meta_clicked(meta) -> void:
+	# warning-ignore:return_value_discarded
+	OS.shell_open(meta)

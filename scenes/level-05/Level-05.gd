@@ -1,8 +1,9 @@
 extends Level
 
 
-onready var boss = $Boss
-onready var portal = $Portal
+onready var boss: StaticBody2D = $Boss
+onready var portal: Area2D = $Portal
+onready var anim: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
@@ -13,6 +14,7 @@ func _ready() -> void:
 func init_event() -> void:
 	Signal.on("s_lv5_before_the_battle", self, "prepare_stage")
 	Signal.on("s_lv5_after_the_battle", self, "reset_stage")
+	Signal.on("s_lv5_focus", self, "focus")
 
 
 func init_stage() -> void:
@@ -38,3 +40,10 @@ func hide_portal() -> void:
 	portal.visible = false
 	portal.collision_layer = 0
 	portal.collision_mask = 0
+
+
+func focus(_params: Array) -> void:
+	Signal.emit_signal("s_freeze_pc", true)
+	anim.play("focus")
+	yield(anim, "animation_finished")
+	Signal.emit_signal("s_freeze_pc", false)

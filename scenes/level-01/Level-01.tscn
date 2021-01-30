@@ -27,4 +27,4 @@ scale = Vector2( -1, 1 )
 
 [node name="Tombstone" parent="." index="7" instance=ExtResource( 3 )]
 position = Vector2( 168, 72 )
-epitaphs = [ "想变强的話不增加攻击力可是不行的", "要优先想辦法获取能够增加攻击力的红色宝石哦~", "——爱的小貼士" ]
+epitaphs = [ "想变强的話不增加攻击力可是不行的", "优先获取能够增加攻击力的红色宝石哦~", "——爱的小貼士" ]
