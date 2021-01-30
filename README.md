@@ -17,7 +17,18 @@ A simple RPG game made with the [Godot game engine](https://godotengine.org/).
 
 ## 使用方式
 
-前往 [release](https://github.com/qixiaoo/mota16/releases) 页面下载与当前操作系统对应的可执行文件游玩。
+选择以下任意一种方式游玩。
+
+- 前往 [release](https://github.com/qixiaoo/mota16/releases) 页面下载与当前操作系统对应的可执行文件游玩。
+- 游玩 [在线版本](https://qixiaoo.github.io/mota16/)
+
+**注意**：在线游玩的方式仅支持 PC，且需要使用新版本的 Chrome。此外在线游玩还需要足够好的网速（约需要下载 30M 左右的游戏文件）。由于网速问题，一般不建议国内用户使用在线游玩的方式。
+
+
+
+## 游戏截图
+
+![额外关卡](https://qixiaoo.github.io/mota16/screenshot.png)
 
 
 
